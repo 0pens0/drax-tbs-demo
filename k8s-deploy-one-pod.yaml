@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: drax-publisher
+  labels:
+    app: drax
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: drax
+  template:
+    metadata:
+      labels:
+        app: drax
+    spec:
+      containers:
+      - name: messagepublisher
+        image: harbor.tanzuworld.com/drax/publisher
+      - name: messagesubscriber
+        image: harbor.tanzuworld.com/drax/subscriber
+      - name: messagepublisherm
+        image: harbor.tanzuworld.com/drax/publisherm
