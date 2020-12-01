@@ -37,3 +37,23 @@ spec:
       containers:
       - name: messagesubscriber
         image: harbor.tanzuworld.com/drax/subscriber
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: drax-publisherm
+  labels:
+    app: drax
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: drax
+  template:
+    metadata:
+      labels:
+        app: drax
+    spec:
+      containers:
+      - name: messagepublisherm
+        image: harbor.tanzuworld.com/drax/publisherm
