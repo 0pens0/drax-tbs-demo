@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    
+    <PackageId>Publisher.Messages</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>HGovind</Authors>
+    <Company>HG</Company>
+
+    <GenerateAppxPackageOnBuild>true</GenerateAppxPackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NServiceBus" Version="7.4.4" />
+  </ItemGroup>
+
+</Project>
